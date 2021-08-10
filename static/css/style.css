@@ -16,10 +16,48 @@ main {
     flex: 1 0 auto;
 }
 
+h5 {
+    margin: 0;
+}
+
 /* CSS class styles section */
 
 .title {
     font-weight: 700;
+    padding: 1rem;
+}
+
+.nav-wrapper a {
+    margin-left: 1rem;
+}
+
+.social,
+.socials {
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 3rem;
+}
+
+.facebook:hover {
+    color: #3B5998;
+}
+
+.instagram:hover {
+    color: #e6e95a;
+}
+
+.twitter:hover {
+    color: #4099ff;
+}
+
+.github:hover {
+    color: #fff;
+}
+
+.padding-left {
+    padding-left: 1rem;
 }
 
 /* CSS ID styles sections */
