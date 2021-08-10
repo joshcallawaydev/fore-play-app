@@ -96,6 +96,7 @@ h5 {
     align-items: stretch;
     align-content: stretch;
     margin: 2rem 0;
+    height: auto;
 }
 
 .flex-items:nth-child(1),
@@ -113,6 +114,10 @@ h5 {
     font-size: 3rem;
 }
 
+.icon:hover {
+    transform: scale(1.1);
+}
+
 .parallax img {
     width: auto;
 }
@@ -126,4 +131,9 @@ h5 {
 #hero-slogan {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+}
+
+#flex-container {
+    margin: 0 5rem 5rem;
+    font-size: 1.8rem;
 }
