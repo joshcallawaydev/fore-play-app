@@ -1,5 +1,7 @@
 import os
-from flask import Flask, render_template, url_for
+from flask import (
+    Flask, render_template, url_for,
+    flash, redirect, request, session)
 
 if os.path.exists("env.py"):
     import env
@@ -13,9 +15,9 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 
 @app.route("/")
-@app.route("/base")
+@app.route("/home")
 def home():
-    return render_template("base.html")
+    return render_template("home.html")
 
 
 if __name__ == "__main__":

@@ -16,6 +16,8 @@ main {
     flex: 1 0 auto;
 }
 
+h1,
+h2,
 h5 {
     margin: 0;
 }
@@ -25,6 +27,14 @@ h5 {
 .title {
     font-weight: 700;
     padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mini-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 .nav-wrapper a {
@@ -60,4 +70,60 @@ h5 {
     padding-left: 1rem;
 }
 
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/static/images/course5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+
+.hero-text {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 2rem 0;
+}
+
+.flex-items:nth-child(1),
+.flex-items:nth-child(2),
+.flex-items:nth-child(3),
+.flex-items:nth-child(4) {
+    display: block;
+    flex-shrink: 1;
+    flex-basis: 12rem;
+    align-self: auto;
+    margin: 1rem;
+}
+
+.icon {
+    font-size: 3rem;
+}
+
+.parallax img {
+    width: auto;
+}
+
 /* CSS ID styles sections */
+
+#hero-title {
+    font-size: 5rem;
+}
+
+#hero-slogan {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
