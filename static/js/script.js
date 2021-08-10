@@ -10,6 +10,7 @@ $(document).ready(function () {
     $('.parallax').parallax();
 });
 
+/* the below code is auto complete, test before deployment */
 $(document).ready(function () {
     $('input.autocomplete').autocomplete({
         data: {
