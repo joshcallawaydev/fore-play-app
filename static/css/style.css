@@ -16,8 +16,10 @@ main {
     flex: 1 0 auto;
 }
 
-/* CSS class section */
+/* CSS class styles section */
 
 .title {
     font-weight: 700;
 }
+
+/* CSS ID styles sections */
