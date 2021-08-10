@@ -24,13 +24,13 @@
         <!-- top navbar -->
         <nav class="nav-extended black-text green lighten-2">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo black-text title">FORE!PLAY</a>
+                <a href="{{ url_for('home') }}" class="brand-logo black-text title">FORE!PLAY</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#" class="black-text">Home</a></li>
+                    <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
                     <li><a href="#" class="black-text">Features</a></li>
                     <li><a href="#" class="black-text">About</a></li>
-                    <li><a href="#" class="btn-small black-text">Register</a></li>
+                    <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
                     <li><a href="#" class="btn-small black-text">Log In</a></li>
                     <li><a href="#" class="btn-small black-text">Log Out</a>
                     </li>
@@ -43,10 +43,10 @@
             <li>
                 <h4 class="center-align green lighten-2 title">FORE!PLAY</h4>
             </li>
-            <li><a href="#" class="black-text">Home</a></li>
+            <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
             <li><a href="#" class="black-text">Features</a></li>
             <li><a href="#" class="black-text">About</a></li>
-            <li><a href="#" class="btn-small black-text">Register</a></li>
+            <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
             <li><a href="#" class="btn-small black-text">Log In</a></li>
             <li><a href="#" class="btn-small black-text">Log Out</a></li>
         </ul>
