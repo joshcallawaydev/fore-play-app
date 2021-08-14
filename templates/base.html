@@ -30,10 +30,13 @@
                     <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
                     <li><a href="#" class="black-text">Features</a></li>
                     <li><a href="#" class="black-text">About</a></li>
+                    {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}" class="black-text">Profile</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a>
+                        {% else %}
                     <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
                     <li><a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a></li>
-                    <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a>
+                    {% endif %}
                     </li>
                 </ul>
             </div>
@@ -47,10 +50,13 @@
             <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
             <li><a href="#" class="black-text">Features</a></li>
             <li><a href="#" class="black-text">About</a></li>
+            {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}" class="black-text">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a></li>
+            {% else %}
             <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
             <li><a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a></li>
-            <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a></li>
+            {% endif %}
         </ul>
 
     </header>
@@ -63,7 +69,7 @@
 
         {% for message in messages %}
         <div class="row flashes">
-            <h5 class="green lighten-2 center-align">{{ message }}</h5>
+            <h5 class="red lighten-2 center-align">{{ message }}</h5>
         </div>
         {% endfor %}
 
