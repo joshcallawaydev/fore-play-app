@@ -37,15 +37,15 @@
             </div>
             <div class="row">
                 <!-- handicap entry row as slider -->
-                <div id="hci-slider" class="input-field col s12 range-field">
+                <div class="range-field input-field col s12">
                     <i class="fas fa-golf-ball prefix"></i>
                     <label for="handicap">Handicap</label>
                     <br>
-                    <input type="range" id="handicap" name="handicap" min="-5" max="36" />
+                    <input type="range" id="handicap" name="handicap" class="validate" min="0" max="36" />
                 </div>
             </div>
             <div class="row">
-                <!-- course row -->
+                <!-- course input row -->
                 <div class="input-field col s12">
                     <i class="fas fa-location-arrow prefix"></i>
                     <input id="home_course" name="home_course" type="text" class="validate">

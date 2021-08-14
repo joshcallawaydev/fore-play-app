@@ -20,18 +20,3 @@ $(document).ready(function () {
         },
     });
 });
-
-var slider = document.getElementById('hci-slider');
-noUiSlider.create(slider, {
-    start: [-5, 36],
-    connect: true,
-    step: 1,
-    orientation: 'horizontal', // 'horizontal' or 'vertical'
-    range: {
-        'min': -5,
-        'max': 36
-    },
-    format: wNumb({
-        decimals: 0
-    })
-});
