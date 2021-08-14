@@ -51,7 +51,7 @@ def register():
         flash("Registration Successful")
         return redirect(url_for("profile", username=session["user"]))
     # change this to dashboard once dashboard.html is created
-    return render_template("profile.html")
+    return render_template("register.html")
 
 
 @app.route("/login", methods=["GET", "POST"])
