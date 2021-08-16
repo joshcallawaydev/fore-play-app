@@ -24,12 +24,13 @@
         <!-- top navbar -->
         <nav class="nav-extended black-text green lighten-2">
             <div class="nav-wrapper">
-                <a href="{{ url_for('home') }}" class="brand-logo black-text title">FORE!PLAY</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <a href="{{ url_for('home') }}" class="brand-logo black-text mini-title">FORE!PLAY</a>
+                <a href="{{ url_for('home') }}" data-target="mobile-demo" class="sidenav-trigger right"><i
+                        class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
-                    <li><a href="#" class="black-text">Features</a></li>
-                    <li><a href="#" class="black-text">About</a></li>
+                    <li><a href="#features" class="black-text">Features</a></li>
+                    <li><a href="#about" class="black-text">About</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', username=session['user']) }}" class="black-text">Profile</a></li>
                     <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a>
@@ -45,11 +46,11 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="center-align green lighten-2 title">FORE!PLAY</h4>
+                <h4 class="center-align green lighten-2 mini-title">FORE!PLAY</h4>
             </li>
             <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
-            <li><a href="#" class="black-text">Features</a></li>
-            <li><a href="#" class="black-text">About</a></li>
+            <li><a href="#features" class="black-text">Features</a></li>
+            <li><a href="#about" class="black-text">About</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('profile', username=session['user']) }}" class="black-text">Profile</a></li>
             <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a></li>
@@ -69,7 +70,7 @@
 
         {% for message in messages %}
         <div class="row flashes">
-            <h5 class="red lighten-2 center-align">{{ message }}</h5>
+            <h5 class="orange lighten-2 center-align flow-text" id="flash_mess">{{ message }}</h5>
         </div>
         {% endfor %}
 
@@ -91,8 +92,9 @@
         <div class="container center">
             <div class="row">
                 <div class="col s12">
-                    <h5 class="black-text title">SOCIAL</h5>
-                    <p class="black-text text-lighten-4">Follow us on all our socials to hear our latest news!</p>
+                    <h5 class="black-text mini-title flow-text">SOCIAL</h5>
+                    <p class="black-text text-lighten-4 padd">Follow us on all our socials to hear our latest news!
+                    </p>
                     <ul>
                         <li class="socials"><a target="_blank" href="#" class="social facebook"><i
                                     class="fab fa-facebook"></i></a></li>

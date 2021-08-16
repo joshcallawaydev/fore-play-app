@@ -18,8 +18,11 @@ main {
 
 h1,
 h2,
+h3,
+h4,
 h5 {
     margin: 0;
+    padding: 0;
 }
 
 /* CSS class styles section */
@@ -29,12 +32,14 @@ h5 {
     padding: 1rem;
     text-align: center;
     text-transform: uppercase;
+    margin: 2rem 2rem;
 }
 
 .mini-title {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.5rem;
     text-transform: uppercase;
+    padding: 1rem;
 }
 
 .nav-wrapper a {
@@ -122,6 +127,19 @@ h5 {
     width: 100%;
 }
 
+.base-text {
+    font-size: 1rem;
+}
+
+.row,
+.col {
+    padding: 0.5rem 0.5rem;
+}
+
+.padd {
+    padding: 1rem 0;
+}
+
 /* CSS ID styles sections */
 
 #hero-title {
@@ -135,4 +153,8 @@ h5 {
 
 #flex-container {
     margin: 0 7rem 5rem;
+}
+
+#flash_mess {
+    padding: 0.5rem 0;
 }
