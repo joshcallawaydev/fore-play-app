@@ -3,7 +3,7 @@
 
 <h1 class="title">Profile</h1>
 <br>
-<h5 class="center mini-title">Welcome {{ username }}</h5>
+<h5 class="center mini-title">Welcome {{ user.first_name }}</h5>
 <br>
 <div class="row">
     <div class="card-panel col s12 m8 offset-m2">
@@ -11,29 +11,29 @@
             <!-- first name and last name row -->
             <div class="col s12 m6">
                 <i class="fas fa-user-circle prefix"></i>
-                <label class="base-text">First Name: </label>
+                <label class="base-text">First Name: {{ user.first_name.capitalize() }}</label>
             </div>
             <div class="col s12 m6 padd">
                 <i class="fas fa-user-circle prefix"></i>
-                <label class="base-text">Last Name: </label>
+                <label class="base-text">Last Name: {{ user.last_name.capitalize() }}</label>
             </div>
         </div>
         <div class="row">
             <!-- email row -->
             <div class="col s12 padd">
                 <i class="fas fa-user-circle prefix"></i>
-                <label class="base-text">Email: </label>
+                <label class="base-text">Email: {{ user.email }}</label>
             </div>
         </div>
         <div class="row">
             <!-- Handicap and home course row -->
             <div class="col s12 m6 padd">
                 <i class="fas fa-golf-ball prefix"></i>
-                <label class="base-text">Handicap: </label>
+                <label class="base-text">Handicap: {{ user.handicap }}</label>
             </div>
             <div class="col s12 m6 padd">
                 <i class="fas fa-location-arrow prefix"></i>
-                <label class="base-text">Home Course: </label>
+                <label class="base-text">Home Course: {{ user.home_course.title() }}</label>
             </div>
         </div>
     </div>
