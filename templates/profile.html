@@ -3,7 +3,7 @@
 
 <h1 class="title">Profile</h1>
 <br>
-<h5 class="center mini-title">Welcome {{ user.first_name }}</h5>
+<h5 class="center">Welcome {{ user.first_name.capitalize() }}</h5>
 <br>
 <div class="row">
     <div class="card-panel col s12 m8 offset-m2">
@@ -31,10 +31,15 @@
                 <i class="fas fa-golf-ball prefix"></i>
                 <label class="base-text">Handicap: {{ user.handicap }}</label>
             </div>
-            <div class="col s12 m6 padd">
+            <div class="col s12 m12 l6 padd">
                 <i class="fas fa-location-arrow prefix"></i>
                 <label class="base-text">Home Course: {{ user.home_course.title() }}</label>
             </div>
+        </div>
+        <div class="row col s12">
+            <a href="{{ url_for('edit_profile', id=user._id) }}" class="col s12 btn-small text-shadow">
+                Edit <i class="fas fa-sign-in-alt"></i>
+            </a>
         </div>
     </div>
 </div>

@@ -94,6 +94,28 @@ def profile(id):
     return redirect(url_for("login"))
 
 
+@app.route("/edit_profile/<id>", methods=["GET", "POST"])
+def edit_profile(id):
+
+    user = mongo.db.users.find_one(
+        {"_id": ObjectId(id)})
+
+    if request.method == "POST":
+
+        edit = {
+            "email": request.form.get("email").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+            "handicap": request.form.get("handicap"),
+            "home_course": request.form.get("home_course"),
+            "first_name": request.form.get("first_name"),
+            "last_name": request.form.get("last_name")
+        }
+        mongo.db.spots.update({"_id": ObjectId(id)}, edit)
+        flash("Profile updated!")
+
+    return render_template("edit_profile.html", user=user)
+
+
 @app.route("/logout")
 def logout():
     # remove user from session cookie
