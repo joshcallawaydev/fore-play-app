@@ -94,14 +94,14 @@ def profile(id):
     return redirect(url_for("login"))
 
 
-@app.route("/edit_profile/<id>", methods=["GET", "POST"])
+@app.route("/edit_profile/<id>", methods=["GET", "POST"]) 
 def edit_profile(id):
-
+    # grab user from database
     user = mongo.db.users.find_one(
         {"_id": ObjectId(id)})
 
     if request.method == "POST":
-
+        # edit user details
         edit = {
             "email": request.form.get("email").lower(),
             "password": generate_password_hash(request.form.get("password")),
@@ -112,6 +112,7 @@ def edit_profile(id):
         }
         mongo.db.users.update({"_id": ObjectId(id)}, edit)
         flash("Profile updated!")
+        return render_template("profile.html", user=user)
 
     return render_template("edit_profile.html", user=user)
 
