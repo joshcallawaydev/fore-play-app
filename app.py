@@ -110,7 +110,7 @@ def edit_profile(id):
             "first_name": request.form.get("first_name"),
             "last_name": request.form.get("last_name")
         }
-        mongo.db.spots.update({"_id": ObjectId(id)}, edit)
+        mongo.db.users.update({"_id": ObjectId(id)}, edit)
         flash("Profile updated!")
 
     return render_template("edit_profile.html", user=user)
