@@ -33,6 +33,7 @@
                     <li><a href="#about" class="black-text">About</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
+                    <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
                     <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a>
                         {% else %}
                     <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
@@ -53,6 +54,7 @@
             <li><a href="#about" class="black-text">About</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
+            <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
             <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a></li>
             {% else %}
             <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>

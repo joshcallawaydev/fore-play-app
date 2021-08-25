@@ -94,7 +94,7 @@ def profile(id):
     return redirect(url_for("login"))
 
 
-@app.route("/edit_profile/<id>", methods=["GET", "POST"]) 
+@app.route("/edit_profile/<id>", methods=["GET", "POST"])
 def edit_profile(id):
     # grab user from database
     user = mongo.db.users.find_one(
@@ -115,6 +115,15 @@ def edit_profile(id):
         return render_template("profile.html", user=user)
 
     return render_template("edit_profile.html", user=user)
+
+
+@app.route("/tracker/<id>")
+def tracker(id):
+
+    user = mongo.db.users.find_one(
+        {"_id": ObjectId(id)})
+
+    return render_template("tracker.html", user=user)
 
 
 @app.route("/logout")
