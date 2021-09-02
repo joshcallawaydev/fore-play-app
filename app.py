@@ -27,6 +27,13 @@ def home():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Registration page function
+    Checks for user,
+    if nothing active,
+    adds new user to db,
+    then adds to session cookie
+    """
     if request.method == "POST":
         # check if user already exists
         existing_user = mongo.db.users.find_one(
@@ -57,6 +64,12 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """
+    Login page function
+    again checks for user,
+    if available, checks password,
+    then directs to profile
+    """
     if request.method == "POST":
         # check if email in db
         existing_user = mongo.db.users.find_one(
@@ -84,6 +97,10 @@ def login():
 
 @app.route("/profile/<id>", methods=["GET", "POST"])
 def profile(id):
+    """
+    Profile page function
+    pulls profile detail from db
+    """
     # grab the id from db
     user = mongo.db.users.find_one(
         {"_id": ObjectId(id)})
@@ -96,6 +113,12 @@ def profile(id):
 
 @app.route("/edit_profile/<id>", methods=["GET", "POST"])
 def edit_profile(id):
+    """
+    Edit profile function
+    find user in db,
+    redirects to edit_profile.html,
+    allows entry to be updated
+    """
     # grab user from database
     user = mongo.db.users.find_one(
         {"_id": ObjectId(id)})
@@ -119,7 +142,9 @@ def edit_profile(id):
 
 @app.route("/tracker/<id>")
 def tracker(id):
-
+    """
+    Course tracker and review function
+    """
     user = mongo.db.users.find_one(
         {"_id": ObjectId(id)})
 
@@ -128,6 +153,10 @@ def tracker(id):
 
 @app.route("/logout")
 def logout():
+    """
+    Logout function
+    removes user from session cookie
+    """
     # remove user from session cookie
     flash("You have been logged out")
     session.pop("user")
@@ -138,6 +167,7 @@ def logout():
 def page_not_found(e):
     """
     A customer error 404 page
+    page has redirects to home and profile
     """
     return render_template("404.html", e=e)
 
