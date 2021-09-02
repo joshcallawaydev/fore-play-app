@@ -135,6 +135,10 @@ h5 {
     padding: 0.5rem 0.5rem;
 }
 
+.padd-top {
+    padding-top: 1.5rem;
+}
+
 /* CSS ID styles sections */
 
 #hero-title {

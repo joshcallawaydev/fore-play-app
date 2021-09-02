@@ -134,6 +134,14 @@ def logout():
     return redirect(url_for("home"))
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    """
+    A customer error 404 page
+    """
+    return render_template("404.html", e=e)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
