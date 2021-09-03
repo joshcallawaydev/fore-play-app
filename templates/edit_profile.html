@@ -4,7 +4,7 @@
 <h1 class="title">Profile</h1>
 
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="#">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_profile', id=user._id) }}">
         <!-- add action url for -->
         <div class="card-panel">
             <div class="row">
@@ -58,6 +58,8 @@
                 <button type="submit" class="col s12 btn-large text-shadow">
                     Update <i class="fas fa-sign-in-alt"></i>
                 </button>
+            </div>
+            <div class="row">
                 <!-- cancel button -->
                 <a href="{{ url_for('profile', id=user._id) }}" class="col s12 btn-large text-shadow">
                     Cancel <i class="fas fa-sign-in-alt"></i>
