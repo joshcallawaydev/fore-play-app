@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="title">Add a course to your tracker...</h1>
+<div class="row col s12 m8 offset-m2">
+    <h5 class="center">Hi {{ user.first_name.capitalize() }}. Please fill in the below form to add a new course to your
+        tracker...</h5>
+</div>
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('add_course', id=user._id) }}">
+        <div class="card-panel">
+            <div class="row">
+                <div class="input-field col s12 m12 l12">
+                    <i class="fas fa-signature prefix"></i>
+                    <input id="course_name" name="course_name" type="text" class="validate">
+                    <label for="course_name">Course Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_length" name="course_length" type="text" class="validate">
+                    <label for="course_length">Course Length</label>
+                </div>
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_par" name="course_par" type="text" class="validate">
+                    <label for="course_par">Course Par</label>
+                </div>
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_holes" name="course_holes" type="text" class="validate">
+                    <label for="course_holes">Course Holes</label>
+                </div>
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_your_score" name="course_your_score" type="text" class="validate">
+                    <label for="course_your_score">Your Score</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="fas fa-table prefix"></i>
+                    <input id="course_date_played" name="course_date_played" type="text" class="validate">
+                    <label for="course_date_played">Date Played (dd-mm-yyyy)</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="fas fa-user-circle prefix"></i>
+                    <input id="course_your_name" name="course_your_name" type="text" class="validate">
+                    <label for="course_your_name">Your Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m12">
+                    <i class="fas fa-comments prefix"></i>
+                    <input id="course_image" name="course_image" type="text" class="validate">
+                    <label for="course_image">Course Image URL</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m12">
+                    <i class="fas fa-comments prefix"></i>
+                    <input id="course_comments" name="course_comments" type="text" class="validate">
+                    <label for="course_comments">Any feedback about the round?</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- submit button -->
+                <button type="submit" class="col s12 m6 btn-large text-shadow">
+                    Update <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <!-- cancel button 
+                <a href="{{ url_for('tracker', id=user._id) }}" class="col s12 m6 btn-large text-shadow">
+                    Cancel <i class="fas fa-sign-in-alt"></i>
+                </a> -->
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

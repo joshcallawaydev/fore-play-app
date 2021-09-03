@@ -151,6 +151,37 @@ def tracker(id):
     return render_template("tracker.html", user=user)
 
 
+@app.route("/add_course/<id>", methods=["GET", "POST"])
+def add_course(id):
+    """
+    Function to add a new course
+    to your tracker
+    """
+
+    user = mongo.db.users.find_one(
+        {"_id": ObjectId(id)})
+
+    if request.method == "POST":
+
+        new = {
+            "course_name": request.form.get("course_name").lower(),
+            "course_length": request.form.get("course_length"),
+            "course_par": request.form.get("course_par"),
+            "course_holes": request.form.get("course_holes"),
+            "course_your_score": request.form.get("course_your_score"),
+            "course_date": request.form.get("course_date"),
+            "course_comments": request.form.get("course_comments").lower(),
+            "course_your_name": request.form.get("course_your_name").lower(),
+            "course_image": request.form.get("course_image")
+        }
+        mongo.db.courses.insert_one(new)
+        flash("Course Added!")
+
+        return render_template("tracker.html", user=user, new=new)
+
+    return render_template("add_course.html", user=user)
+
+
 @app.route("/logout")
 def logout():
     """

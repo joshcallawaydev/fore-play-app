@@ -7,6 +7,11 @@
     <div class="row">
         <!-- this will be for adding a new course -->
     </div>
+    <div class="row col s12 center">
+        <a href="{{ url_for('add_course', id=user._id) }}" class="btn-small text-shadow">
+            Add a new course? <i class="fas fa-location-arrow prefix"></i>
+        </a>
+    </div>
 </div>
 
 {% endblock %}
