@@ -4,11 +4,30 @@
 <h1 class="title">My Course Tracker</h1>
 
 <div class="container">
+    {% for course in courses %}
     <div class="row">
         <!-- this will be for adding a new course -->
+        <div class="card-panel col s12 m8 offset-m2">
+
+            <div class="row">
+
+                <h3>{{ course.course_name }}</h3>
+
+            </div>
+            <div class="row">
+                <img src="{{ course.course_image }}" alt="a image of the golf course">
+            </div>
+            <div class="row col s12 center">
+                <a href="{{ url_for('delete_course', id=course._id) }}" class="btn-small text-shadow">
+                    Delete Course? <i class="fas fa-location-arrow prefix"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
+    {% endfor %}
     <div class="row col s12 center">
-        <a href="{{ url_for('add_course', id=user._id) }}" class="btn-small text-shadow">
+        <a href="{{ url_for('add_course', id=user_id) }}" class="btn-small text-shadow">
             Add a new course? <i class="fas fa-location-arrow prefix"></i>
         </a>
     </div>

@@ -145,10 +145,11 @@ def tracker(id):
     """
     Course tracker and review function
     """
-    user = mongo.db.users.find_one(
-        {"_id": ObjectId(id)})
 
-    return render_template("tracker.html", user=user)
+    courses = list(mongo.db.courses.find({"user_id": id}))
+
+    return render_template(
+        "tracker.html", user_id=session["user"], courses=courses)
 
 
 @app.route("/add_course/<id>", methods=["GET", "POST"])
@@ -172,14 +173,25 @@ def add_course(id):
             "course_date": request.form.get("course_date"),
             "course_comments": request.form.get("course_comments").lower(),
             "course_your_name": request.form.get("course_your_name").lower(),
-            "course_image": request.form.get("course_image")
+            "course_image": request.form.get("course_image"),
+            "user_id": id
         }
         mongo.db.courses.insert_one(new)
         flash("Course Added!")
 
-        return render_template("tracker.html", user=user, new=new)
+        return render_template("tracker.html", new=new)
 
     return render_template("add_course.html", user=user)
+
+
+@app.route("/delete_course/<id>", methods=["GET"])
+def delete_course(id):
+    """
+    """
+
+    mongo.db.courses.delete_one({"_id": ObjectId(id)})
+
+    return redirect(url_for("tracker", id=session["user"]))
 
 
 @app.route("/logout")
