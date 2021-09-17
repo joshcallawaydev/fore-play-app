@@ -179,7 +179,7 @@ def add_course(id):
         mongo.db.courses.insert_one(new)
         flash("Course Added!")
 
-        return render_template("tracker.html", new=new)
+        return redirect(url_for("tracker", new=new, id=session["user"]))
 
     return render_template("add_course.html", user=user)
 
@@ -187,6 +187,7 @@ def add_course(id):
 @app.route("/delete_course/<id>", methods=["GET"])
 def delete_course(id):
     """
+    Function for deleting courses from your tracker
     """
 
     mongo.db.courses.delete_one({"_id": ObjectId(id)})
