@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1 class="title">Update Course...</h1>
+
+<div class="row">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_tracker', cid=course._id) }}">
+        <div class="card-panel">
+            <div class="row">
+                <div class="input-field col s12 m12 l12">
+                    <i class="fas fa-signature prefix"></i>
+                    <input id="course_name" name="course_name" type="text" class="validate" required>
+                    <label for="course_name">Course Name: {{ course.course_name.title() }}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_length" name="course_length" type="text" class="validate" required>
+                    <label for="course_length">Length: {{ course.course_length }}?</label>
+                </div>
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_par" name="course_par" type="text" class="validate" min="0" max="80" required>
+                    <label for="course_par">Course Par: {{ course.course_par }}?</label>
+                </div>
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_holes" name="course_holes" type="text" class="validate" value="18" min="0"
+                        max="36" required>
+                    <label for="course_holes">Course Holes: {{ course.course_holes }}?</label>
+                </div>
+                <div class="input-field col s12 m6 l3">
+                    <i class="fas fa-greater-than prefix"></i>
+                    <input id="course_your_score" name="course_your_score" type="text" class="validate" required>
+                    <label for="course_your_score">Your Score: {{ course.course_your_score }}?</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m6">
+                    <i class="fas fa-table prefix"></i>
+                    <input id="course_date" name="course_date" type="text" class="datepicker" required>
+                    <label for="course_date">Date Played: {{ course.course_date }}?</label>
+                </div>
+                <div class="input-field col s12 m6">
+                    <i class="fas fa-user-circle prefix"></i>
+                    <input id="course_your_name" name="course_your_name" type="text" class="validate" required>
+                    <label for="course_your_name">Your Name: {{ course.course_your_name.title() }}</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m12">
+                    <i class="fas fa-comments prefix"></i>
+                    <input id="course_image" name="course_image" type="text" class="validate" required>
+                    <label for="course_image">Course Image URL: *copy image address*</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12 m12">
+                    <i class="fas fa-comments prefix"></i>
+                    <input id="course_comments" name="course_comments" type="text" class="validate" required
+                        minlength="4" maxlength="80">
+                    <label for="course_comments">Any feedback about the round?</label>
+                </div>
+            </div>
+            <div class="row">
+                <!-- submit button -->
+                <button type="submit" class="col s12 m6 btn-large text-shadow">
+                    Update <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <!-- cancel button -->
+                <a href="{{ url_for('tracker', id=user._id) }}" class="col s12 m6 btn-large text-shadow">
+                    Cancel <i class="fas fa-sign-in-alt"></i>
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
