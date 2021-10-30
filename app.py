@@ -184,12 +184,12 @@ def add_course(id):
     return render_template("add_course.html", user=user)
 
 
-@app.route("/edit_tracker/<cid>", methods=["GET", "POST"])
-def edit_tracker(cid):
+@app.route("/edit_tracker/<course_id>", methods=["GET", "POST"])
+def edit_tracker(course_id):
     """
     function for editting a course in your tracker
     """
-    course = mongo.db.courses.find_one({"_id": ObjectId(cid)})
+    course = mongo.db.courses.find_one({"_id": ObjectId(course_id)})
 
     if request.method == "POST":
 
@@ -203,12 +203,12 @@ def edit_tracker(cid):
             "course_comments": request.form.get("course_comments").lower(),
             "course_your_name": request.form.get("course_your_name").lower(),
             "course_image": request.form.get("course_image"),
-            "user_id": id
+            "user_id": session["user"]
         }
-        mongo.db.courses.update({"_id": ObjectId(cid)}, edit)
+        mongo.db.courses.update({"_id": ObjectId(course_id)}, edit)
         flash("Course successfully updated")
 
-        return redirect(url_for("tracker.html", user=session["user"]))
+        return redirect(url_for("tracker", id=session["user"]))
 
     return render_template(
         "edit_tracker.html", course=course, user=session["user"])
