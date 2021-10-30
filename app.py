@@ -10,7 +10,7 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
-
+# database configuration
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -104,7 +104,7 @@ def profile(id):
     # grab the id from db
     user = mongo.db.users.find_one(
         {"_id": ObjectId(id)})
-
+    # if user, directs to profile
     if session["user"]:
         return render_template("profile.html", user=user)
 
@@ -145,7 +145,7 @@ def tracker(id):
     """
     Course tracker and review function
     """
-
+    # pulls user courses from db
     courses = list(mongo.db.courses.find({"user_id": id}))
 
     return render_template(
@@ -158,12 +158,12 @@ def add_course(id):
     Function to add a new course
     to your tracker
     """
-
+    # finds the user profile
     user = mongo.db.users.find_one(
         {"_id": ObjectId(id)})
 
     if request.method == "POST":
-
+        # takes the form values and adds to variable
         new = {
             "course_name": request.form.get("course_name").lower(),
             "course_length": request.form.get("course_length"),
@@ -176,6 +176,7 @@ def add_course(id):
             "course_image": request.form.get("course_image"),
             "user_id": id
         }
+        # takes var data and assigns to db
         mongo.db.courses.insert_one(new)
         flash("Course Added!")
 
@@ -189,6 +190,7 @@ def edit_tracker(course_id):
     """
     function for editting a course in your tracker
     """
+    # pulls the relevant course from db when selected by user
     course = mongo.db.courses.find_one({"_id": ObjectId(course_id)})
 
     if request.method == "POST":
@@ -205,6 +207,7 @@ def edit_tracker(course_id):
             "course_image": request.form.get("course_image"),
             "user_id": session["user"]
         }
+        # pushes update to db
         mongo.db.courses.update({"_id": ObjectId(course_id)}, edit)
         flash("Course successfully updated")
 
@@ -219,7 +222,6 @@ def delete_course(id):
     """
     Function for deleting courses from your tracker
     """
-
     mongo.db.courses.delete_one({"_id": ObjectId(id)})
     flash("Course deleted")
 
