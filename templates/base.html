@@ -32,14 +32,14 @@
                     <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
                     <li><a href="#features" class="black-text">Features</a></li>
                     <li><a href="#about" class="black-text">About</a></li>
-                    {% if session.user %}
-                    <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
-                    <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
-                    <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a>
+                        {% if session.user %}
+                            <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
+                            <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
+                            <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a>
                         {% else %}
-                    <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
-                    <li><a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a></li>
-                    {% endif %}
+                            <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
+                            <li><a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a></li>
+                        {% endif %}
                     </li>
                 </ul>
             </div>
@@ -53,14 +53,14 @@
             <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
             <li><a href="#features" class="black-text">Features</a></li>
             <li><a href="#about" class="black-text">About</a></li>
-            {% if session.user %}
-            <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
-            <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
-            <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a></li>
-            {% else %}
-            <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
-            <li><a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a></li>
-            {% endif %}
+                {% if session.user %}
+                    <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
+                    <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
+                    <li><a href="{{ url_for('logout') }}" class="btn-small black-text">Log Out</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('register') }}" class="btn-small black-text">Register</a></li>
+                    <li><a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a></li>
+                {% endif %}
         </ul>
 
     </header>
@@ -69,15 +69,15 @@
         <!-- flash message -->
         {% with messages = get_flashed_messages() %}
 
-        {% if messages %}
+            {% if messages %}
 
-        {% for message in messages %}
-        <div class="flashes">
-            <h5 class="orange lighten-2 center-align" id="flash_mess">{{ message }}</h5>
-        </div>
-        {% endfor %}
+                {% for message in messages %}
+                    <div class="flashes">
+                        <h5 class="orange lighten-2 center-align" id="flash_mess">{{ message }}</h5>
+                    </div>
+                {% endfor %}
 
-        {% endif %}
+            {% endif %}
 
         {% endwith %}
     </section>

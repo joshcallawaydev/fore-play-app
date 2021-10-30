@@ -5,59 +5,59 @@
 
 <div class="container center">
     {% for course in courses %}
-    <div class="row">
-        <!-- this will be for adding a new course -->
-        <div class="card-panel col s12 m10 offset-m1">
-            <div class="row">
-                <h3 class="tracker-title">{{ course.course_name.title() }}</h3>
-            </div>
-            <div class="row">
-                <img src="{{ course.course_image }}" alt="a image of the golf course" class="tracker-img">
-            </div>
-            <div class="row">
-                <div class="col s6 m3 ">
-                    <h6>Course Par</h6>
-                    <p class="padd">{{ course.course_par }}</p>
+        <div class="row">
+            <!-- this will be for adding a new course -->
+            <div class="card-panel col s12 m10 offset-m1">
+                <div class="row">
+                    <h3 class="tracker-title">{{ course.course_name.title() }}</h3>
                 </div>
-                <div class="col s6 m3">
-                    <h6>Course Length</h6>
-                    <p class="padd">{{ course.course_length }}</p>
+                <div class="row">
+                    <img src="{{ course.course_image }}" alt="a image of the golf course" class="tracker-img">
                 </div>
-                <div class="col s6 m3">
-                    <h6>Num Holes</h6>
-                    <p class="padd">{{ course.course_holes }}</p>
+                <div class="row">
+                    <div class="col s6 m3 ">
+                        <h6>Course Par</h6>
+                        <p class="padd">{{ course.course_par }}</p>
+                    </div>
+                    <div class="col s6 m3">
+                        <h6>Course Length</h6>
+                        <p class="padd">{{ course.course_length }}</p>
+                    </div>
+                    <div class="col s6 m3">
+                        <h6>Num Holes</h6>
+                        <p class="padd">{{ course.course_holes }}</p>
+                    </div>
+                    <div class="col s6 m3">
+                        <h6>Your Score</h6>
+                        <p class="padd">{{ course.course_your_score }}</p>
+                    </div>
                 </div>
-                <div class="col s6 m3">
-                    <h6>Your Score</h6>
-                    <p class="padd">{{ course.course_your_score }}</p>
+                <div class="row">
+                    <div class="col s12">
+                        <h6>Additional Comments</h6>
+                        <p class="padd">{{ course.course_comments.capitalize() }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <h6>Additional Comments</h6>
-                    <p class="padd">{{ course.course_comments.capitalize() }}</p>
+                <div class="row center">
+                    <div class="col s12">
+                        <h6>Date Played:</h6>
+                        <p class="padd">{{ course.course_date }}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row center">
-                <div class="col s12">
-                    <h6>Date Played:</h6>
-                    <p class="padd">{{ course.course_date }}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s6 center">
-                    <a href="{{ url_for('delete_course', id=course._id) }}" class="btn text-shadow">
-                        Delete
-                    </a>
-                </div>
-                <div class="col s6 center">
-                    <a href="{{ url_for('edit_tracker', course_id=course._id) }}" class="btn text-shadow">
-                        Edit
-                    </a>
+                <div class="row">
+                    <div class="col s6 center">
+                        <a href="{{ url_for('delete_course', id=course._id) }}" class="btn text-shadow">
+                            Delete
+                        </a>
+                    </div>
+                    <div class="col s6 center">
+                        <a href="{{ url_for('edit_tracker', course_id=course._id) }}" class="btn text-shadow">
+                            Edit
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     {% endfor %}
     <div class="row col s12 center">
         <a href="{{ url_for('add_course', id=user_id) }}" class="btn-small text-shadow">
