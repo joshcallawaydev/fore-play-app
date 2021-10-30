@@ -6,7 +6,11 @@
     <div class="hero-text">
         <h1 class="title" id="hero-title">FORE!PLAY</h1>
         <p id="hero-slogan">The network for golfers, by golfers.</p>
-        <a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a>
+        {% if session.user %} 
+            <a href="{{ url_for('profile', id=session['user']) }}" class="btn-small black-text">Profile</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a>
+        {% endif %}
     </div>
 </section>
 
@@ -33,7 +37,7 @@
     <div class="flex-items">
         <i class="fas fa-golf-ball icon"></i>
         <h4 class="mini-title">Made by golfers</h4>
-        <p>We understand what golfers need, becuase we play too.</p>
+        <p>Just sign in and start adding your events played...</p>
     </div>
 </div>
 
@@ -45,9 +49,8 @@
 <!-- about section -->
 <h3 class="title" id="about">About</h3>
 <div class="flex-container center" id="flex-container">
-    <p><strong>FORE!PLAY</strong> is a free to use web application for tracking all your golf events and scores. Simply
-        sign up, create
-        your profile and start tracking. See suggestions on trending golf courses and the communities scores.</p>
+    <p id="homepage__description"><strong>FORE!PLAY</strong> is a free to use web application for tracking all your golf events and scores. Simply
+        sign up, create your profile and start tracking your progress!</p>
 </div>
 
 {% endblock %}
