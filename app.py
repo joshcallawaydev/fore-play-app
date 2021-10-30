@@ -221,6 +221,7 @@ def delete_course(id):
     """
 
     mongo.db.courses.delete_one({"_id": ObjectId(id)})
+    flash("Course deleted")
 
     return redirect(url_for("tracker", id=session["user"]))
 
