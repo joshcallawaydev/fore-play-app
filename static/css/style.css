@@ -35,6 +35,12 @@ h5 {
     margin: 2rem 2rem;
 }
 
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    margin: 0.5rem 2rem 3rem;
+}
+
 .mini-title {
     font-weight: 700;
     font-size: 1.5rem;
@@ -91,28 +97,6 @@ h5 {
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: stretch;
-    margin: 2rem 0;
-    height: auto;
-}
-
-.flex-items:nth-child(1),
-.flex-items:nth-child(2),
-.flex-items:nth-child(3),
-.flex-items:nth-child(4) {
-    display: block;
-    flex-shrink: 1;
-    flex-basis: 12rem;
-    align-self: auto;
-    margin: 1rem;
 }
 
 .icon {
