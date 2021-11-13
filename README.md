@@ -22,7 +22,7 @@ Fore-play is a for golfers web application for updating and tracking your activi
 
 - understand what the site does from the home page
 - easily navigate the site
-- Sign Up / Sign In
+- Sign Up
 - See some visuals to intise me in
 
 #### 2. Returning user - as a returning user i would like to
@@ -30,20 +30,19 @@ Fore-play is a for golfers web application for updating and tracking your activi
 - Easily navigate the site
 - Sign In
 - Update my tracker
-- See other entries
+- See entries
 - Update my profile
 
 #### 3. Frequent user - as a frequent user i would like to
 
 - See social media links
 - Contact the business
-- Update my profile again
+- Update my profile
 - Make more entries
-- See more entries
 
 ### Colour Scheme
 
-The colour scheme was chosen to match the asthetics of the site, being a golf web application. The colours are built in Materialize CSS.
+The colour scheme was chosen to match the asthetics of the site, being a golf web application. The colours are built in Materialize CSS colours.
 
 ### Typography
 
@@ -55,7 +54,7 @@ I chose this font for its readability at all sizes and its good solid structure 
 
 - Backup - Helvetica and Sans Serif
 
-I chose to add backup fonts should there be any problem rendering the imported forn and should the user not have functionality for the google font.
+I chose to add backup fonts should there be any problem rendering the imported font and should the user not have functionality for the google font.
 
 ### Sizing
 
