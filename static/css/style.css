@@ -179,3 +179,11 @@ h5 {
 #homepage__description {
     font-size: 2rem;
 }
+
+#profile-card {
+    padding: 2rem;
+}
+
+#profile-handicap-row {
+    padding-bottom: 1rem;
+}
