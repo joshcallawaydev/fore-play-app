@@ -30,8 +30,8 @@
                         class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
-                    <li><a href="#features" class="black-text">Features</a></li>
-                    <li><a href="#about" class="black-text">About</a></li>
+                    <li><a href="{{ url_for('home') }}#features" class="black-text">Features</a></li>
+                    <li><a href="{{ url_for('home') }}#about" class="black-text">About</a></li>
                         {% if session.user %}
                             <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
                             <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
@@ -51,8 +51,8 @@
                 <h4 class="center-align green lighten-2 mini-title">FORE!PLAY</h4>
             </li>
             <li><a href="{{ url_for('home') }}" class="black-text">Home</a></li>
-            <li><a href="#features" class="black-text">Features</a></li>
-            <li><a href="#about" class="black-text">About</a></li>
+            <li><a href="{{ url_for('home') }}#features" class="black-text">Features</a></li>
+            <li><a href="{{ url_for('home') }}#about" class="black-text">About</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('profile', id=session['user']) }}" class="black-text">Profile</a></li>
                     <li><a href="{{ url_for('tracker', id=session['user']) }}" class="black-text">My Tracker</a></li>
