@@ -4,6 +4,7 @@ Notes:
 1. Set debug to false before deployment
 2. test auto complete jQuery before deployment
 3. update nav permissions
+4. Depoloy to heroku
 
 Fore-play is a for golfers web application for updating and tracking your activity and play. Built in Python with Flask and using Materialize for quick construction. Feel free to fork the repository if you would like to further develop the site. Instructions for this are at the bottom of the README.
 
