@@ -147,9 +147,11 @@ def tracker(id):
     """
     # pulls user courses from db
     courses = list(mongo.db.courses.find({"user_id": id}))
+    other_courses = list(mongo.db.courses.find())
 
     return render_template(
-        "tracker.html", user_id=session["user"], courses=courses)
+        "tracker.html", user_id=session["user"], courses=courses,
+        other_courses=other_courses)
 
 
 @app.route("/add_course/<id>", methods=["GET", "POST"])

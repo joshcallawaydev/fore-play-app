@@ -14,13 +14,6 @@ $(document).ready(function () {
     $('.datepicker').datepicker();
 });
 
-/* the below code is auto complete, test before deployment */
-$(document).ready(function () {
-    $('input.autocomplete').autocomplete({
-        data: {
-            "Apple": null,
-            "Microsoft": null,
-            "Google": 'https://placehold.it/250x250'
-        },
-    });
-});
+$(document).ready(function(){
+    $('.carousel').carousel();
+  });

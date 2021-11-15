@@ -41,6 +41,18 @@ h5 {
     margin: 0.5rem 2rem 3rem;
 }
 
+.carousel-card {
+    text-align: center;
+    padding: 2rem;
+    margin: 0.5rem 2rem 0.5rem;
+    height: 23rem;
+    padding: 2rem;
+}
+
+.carousel {
+    height: 22rem;
+}
+
 .mini-title {
     font-weight: 700;
     font-size: 1.5rem;
@@ -131,6 +143,14 @@ h5 {
     width: 90%;
     height: 10%;
     border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.small-img {
+    width: 100px;
+    height: 125px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
