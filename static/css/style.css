@@ -27,6 +27,11 @@ h5 {
 
 /* CSS class styles section */
 
+.line-break {
+    border: 1px solid rgba(204, 204, 204, 0.308);
+    margin: 0.5rem 4rem 3rem;
+}
+
 .title {
     font-weight: 700;
     padding: 1rem;
@@ -46,7 +51,7 @@ h5 {
     padding: 2rem;
     margin: 0.5rem 2rem 0.5rem;
     height: 23rem;
-    padding: 2rem;
+    padding: 0.5rem 3rem 0.5rem;
 }
 
 .carousel {
