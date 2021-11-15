@@ -9,7 +9,7 @@
         {% if session.user %} 
             <a href="{{ url_for('profile', id=session['user']) }}" class="btn-small black-text">Profile</a>
         {% else %}
-            <a href="{{ url_for('login') }}" class="btn-small black-text">Log In</a>
+            <a href="{{ url_for('login') }}" class="btn-small pulse black-text">Log In</a>
         {% endif %}
     </div>
 </section>
