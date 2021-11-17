@@ -46,6 +46,10 @@ h5 {
     margin: 0.5rem 2rem 3rem;
 }
 
+.feature-text {
+    margin-bottom: 1rem;
+}
+
 .carousel-card {
     text-align: center;
     padding: 2rem;
@@ -124,8 +128,14 @@ h5 {
     transform: scale(1.1);
 }
 
+.parallax-container {
+    height: 22rem;
+    width: 100%;
+}
+
 .parallax img {
     width: 100%;
+    background-size: cover;
 }
 
 .base-text {
