@@ -112,6 +112,7 @@ h5 {
 }
 
 .hero-text {
+    width: 80%;
     text-align: center;
     color: white;
     position: absolute;
@@ -177,13 +178,14 @@ h5 {
 /* CSS ID styles sections */
 
 #hero-title {
-    font-size: 5rem;
-    margin-top: 8rem;
+    font-size: 3rem;
+    margin-top: 7rem;
 }
 
 #hero-slogan {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    padding: 0 2rem;
 }
 
 #flash_mess {

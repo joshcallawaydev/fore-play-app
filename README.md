@@ -2,10 +2,10 @@
 
 Notes:
 1. Set debug to false before deployment
-2. test auto complete jQuery before deployment
-3. update nav permissions
 
-Fore-play is a for golfers web application for updating and tracking your activity and play. Built in Python with Flask and using Materialize for quick construction. Feel free to fork the repository if you would like to further develop the site. Instructions for this are at the bottom of the README.
+Fore-play is a for golfers web application for updating and tracking your activity and play. Built in Python with Flask and using Materialize for quick construction. Feel free to fork the repository if you would like to further develop the site. Instructions for this are at the bottom of the page.
+
+View live site here
 
 # Table Of Contents
 
@@ -35,14 +35,14 @@ Fore-play is a for golfers web application for updating and tracking your activi
 
 #### 3. Frequent user - as a frequent user i would like to
 
+- see other peoples entries
 - See social media links
 - Contact the business
 - Update my profile
-- Make more entries
 
 ### Colour Scheme
 
-The colour scheme was chosen to match the asthetics of the site, being a golf web application. The colours are built in Materialize CSS colours.
+The colour scheme was chosen to match the asthetics of the site, being a golf web application. The colours are built in Materialize CSS colour choices with a simple green main colour theme.
 
 ### Typography
 
@@ -106,9 +106,11 @@ I chose REM as the primary unit metric due to its flexability with responsive de
 - ObjectId
 - Werkzeug (generate_password_hash, check_password_hash)
 
+### Database / Schema
+
 # Testing
 
-See TESTING.MD for comprhensive testing
+See TESTING.md for comprhensive testing
 
 # Deployment
 
