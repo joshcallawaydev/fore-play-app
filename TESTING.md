@@ -18,47 +18,53 @@ In effort to improve UX/UI i regularly tested the site functionality and respons
 1. First time user - as a first time user i would like to
 
 - understand what the site does from the home page
+
 ![Homepage image](./static/images/testing_img/homepage_image.png)
 
 - easily navigate the site
-![](./static/images/testing_img/homepage_image.png)
+
+![](./static/images/testing_img/easy_navigation.png)
 
 - Sign Up
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/register.png)
 
 - See some visuals to intise me in
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/hero.png)
 
 2. Returning user - as a returning user i would like to
 
-- Easily navigate the site
-![](./static/images/testing_img/)
-
 - Sign In
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/login.png)
 
 - Update my tracker
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/add_new_course.png)
 
 - See entries
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/tracker.png)
 
 - Update my profile
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/profile.png)
 
 3. Frequent user - as a frequent user i would like to
 
 - see other peoples entries
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/tracker.png)
 
 - See social media links
-![](./static/images/testing_img/)
+
+![](./static/images/testing_img/socials.png)
 
 - Contact the business
-![](./static/images/testing_img/)
 
-- Update my profile
-![](./static/images/testing_img/)
+![](./static/images/testing_img/socials.png)
+
 
 # Dev Tools Testing
 
