@@ -23,48 +23,53 @@ In effort to improve UX/UI i regularly tested the site functionality and respons
 
 - easily navigate the site
 
-![](./static/images/testing_img/easy_navigation.png)
+![the site navigation](./static/images/testing_img/easy_navigation.png)
 
 - Sign Up
 
-![](./static/images/testing_img/register.png)
+![registration page](./static/images/testing_img/register.png)
 
 - See some visuals to intise me in
 
-![](./static/images/testing_img/hero.png)
+![the hero section](./static/images/testing_img/hero.png)
 
 2. Returning user - as a returning user i would like to
 
 - Sign In
 
-![](./static/images/testing_img/login.png)
+![login page](./static/images/testing_img/login.png)
 
 - Update my tracker
 
-![](./static/images/testing_img/add_new_course.png)
+![add a new course](./static/images/testing_img/add_new_course.png)
 
 - See entries
 
-![](./static/images/testing_img/tracker.png)
+![the tracker](./static/images/testing_img/tracker.png)
 
 - Update my profile
 
-![](./static/images/testing_img/profile.png)
+![the profile](./static/images/testing_img/profile.png)
 
 3. Frequent user - as a frequent user i would like to
 
 - see other peoples entries
 
-![](./static/images/testing_img/tracker.png)
+![the see others section](./static/images/testing_img/tracker.png)
 
 - See social media links
 
-![](./static/images/testing_img/socials.png)
+![the social links](./static/images/testing_img/socials.png)
 
 - Contact the business
 
-![](./static/images/testing_img/socials.png)
+![the social links](./static/images/testing_img/socials.png)
 
+Errors
+
+The site has a 404 error page...
+
+![404 error page](./static/images/testing_img/404.png)
 
 # Dev Tools Testing
 
@@ -76,15 +81,7 @@ Below is an image of me working thgrough the code in dev tools
 
 - Lighthouse score
 
-![]()
-
-- Firefox testing
-
-![]()
-
-- Safari testing
-
-![]()
+![the lighthouse chrome test](./static/images/testing_img/lighthouse.png)
 
 # Validators
 
