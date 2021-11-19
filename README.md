@@ -79,6 +79,17 @@ All images were free to licence and use from pixabay
 3) mobile
 ![Desktop view](./static/images/testing_img/desktop_wire.png)
 
+Design rationale - strategy, scope, structure, skeleton, surface
+The application was designed to help users track their golf activity.
+
+I used a simple flexable design that made sure all major functionality and calls to action were immediatly present, making the site easier to use and understand.
+
+All site features are only a few clicks to prevent unneccesary complexity.
+
+The main feature is a round tracker.
+
+The colour scheme was chosen to match the asthetics of a golf application.
+
 # Technology
 
 ### Languages
