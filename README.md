@@ -5,7 +5,7 @@ Notes:
 
 Fore-play is a for golfers web application for updating and tracking your activity and play. Built in Python with Flask and using Materialize for quick construction. Feel free to fork the repository if you would like to further develop the site. Instructions for this are at the bottom of the page.
 
-View live site here
+View live site here: http://fore-play-app.herokuapp.com/home
 
 # Table Of Contents
 
@@ -44,6 +44,8 @@ View live site here
 
 The colour scheme was chosen to match the asthetics of the site, being a golf web application. The colours are built in Materialize CSS colour choices with a simple green main colour theme.
 
+![main colour](./static/images/testing_img/colour.png)
+
 ### Typography
 
 All fonts were taken from Google fonts (https://fonts.google.com/).
@@ -62,6 +64,7 @@ I chose REM as the primary unit metric due to its flexability with responsive de
 
 ### Imagery
 
+All images were free to licence and use from pixabay
 
 # Design
 
@@ -75,9 +78,6 @@ I chose REM as the primary unit metric due to its flexability with responsive de
 
 3) mobile
 ![Desktop view](./static/images/testing_img/desktop_wire.png)
-
-### Design Rationale
-
 
 # Technology
 
@@ -114,6 +114,12 @@ I chose REM as the primary unit metric due to its flexability with responsive de
 - Werkzeug (generate_password_hash, check_password_hash)
 
 ### Database / Schema
+
+MongoDB was used for database support. with a simple 2 schema
+
+![high level database](./static/images/testing_img/db1.png)
+![courses table](./static/images/testing_img/db2.png)
+![users table](./static/images/testing_img/db3.png)
 
 # Testing
 
