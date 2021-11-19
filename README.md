@@ -65,9 +65,16 @@ I chose REM as the primary unit metric due to its flexability with responsive de
 
 # Design
 
-
 ### UI / Mockups
 
+1) mobile
+![Mobile view](./static/images/testing_img/mobile_wire.png)
+
+2) mobile
+![Tablet view](./static/images/testing_img/tablet_wire.png)
+
+3) mobile
+![Desktop view](./static/images/testing_img/desktop_wire.png)
 
 ### Design Rationale
 
