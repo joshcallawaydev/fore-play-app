@@ -142,11 +142,27 @@ The site is deployed with Heroku. I chose Heroku for its ease of use and ability
 
 Deployment instructions...
 
-1. step
-2. step
-3. step
+Heroku requires these files to run:
 
-pictures
+requirements.txt
+Procfile
+
+1. In Heroku, create an app with a unique name
+2. Choose region and click 'Create App'
+3. Select GitHub as Deployment method
+4. Type in repo name and click search then connect
+
+How to find variables to define in env.py...
+
+1. Click on Settings tab
+2. Click on Reveal Config Vars
+
+Deploying app
+
+1. Click on Deploy tab
+2. enable automatic deploys
+3. Click deploy branch. Make sure the master branch is selected
+4. you should see - Your app was successfully deployed
 
 ### Forking
 
@@ -169,4 +185,4 @@ By forking the GitHub Repo, you make a copy of the original repository on your G
 
 # Credit
 
-This is an original concept. Only images are taken from other sources. See design section for locations.
+This is an original concept. The code is inspired by the python task manager app. Only images are taken from other sources.
