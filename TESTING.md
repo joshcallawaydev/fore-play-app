@@ -23,47 +23,47 @@ In effort to improve UX/UI i regularly tested the site functionality and respons
 
 - easily navigate the site
 
-![the site navigation](./static/images/testing_img/easy_navigation.png)
+![The site navigation](./static/images/testing_img/easy_navigation.png)
 
 - Sign Up
 
-![registration page](./static/images/testing_img/register.png)
+![Registration page](./static/images/testing_img/register.png)
 
 - See some visuals to intise me in
 
-![the hero section](./static/images/testing_img/hero.png)
+![The hero section](./static/images/testing_img/hero.png)
 
 2. Returning user - as a returning user i would like to
 
 - Sign In
 
-![login page](./static/images/testing_img/login.png)
+![Login page](./static/images/testing_img/login.png)
 
 - Update my tracker
 
-![add a new course](./static/images/testing_img/add_new_course.png)
+![Add a new course](./static/images/testing_img/add_new_course.png)
 
 - See entries
 
-![the tracker](./static/images/testing_img/tracker.png)
+![The tracker](./static/images/testing_img/tracker.png)
 
 - Update my profile
 
-![the profile](./static/images/testing_img/profile.png)
+![The profile](./static/images/testing_img/profile.png)
 
 3. Frequent user - as a frequent user i would like to
 
 - see other peoples entries
 
-![the see others section](./static/images/testing_img/tracker.png)
+![The see others section](./static/images/testing_img/tracker.png)
 
 - See social media links
 
-![the social links](./static/images/testing_img/socials.png)
+![The social links](./static/images/testing_img/socials.png)
 
 - Contact the business
 
-![the social links](./static/images/testing_img/socials.png)
+![The social links](./static/images/testing_img/socials.png)
 
 Errors
 
@@ -96,12 +96,16 @@ Below is an image of me working thgrough the code in dev tools
 
 - Lighthouse score
 
-![the lighthouse chrome test](./static/images/testing_img/lighthouse.png)
+![The lighthouse chrome test](./static/images/testing_img/lighthouse.png)
 
 # Validators
 
-No issues found in code validation
+No issues found in code validation. A warning stating that between section tags i need h1-h6 tags but these are section tags for the flash messages.
 
-CSS Validation 
+HTML Validation
+
+![HTML validation](./static/images/testing_img/html_validation.png)
+
+CSS Validation
 
 ![css validation](./static/images/testing_img/css_validation.png)
