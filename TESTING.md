@@ -102,4 +102,6 @@ Below is an image of me working thgrough the code in dev tools
 
 No issues found in code validation
 
-![]()
+CSS Validation 
+
+![css validation](./static/images/testing_img/css_validation.png)
