@@ -126,7 +126,7 @@ The colour scheme was chosen to match the asthetics of a golf application.
 
 ### Database / Schema
 
-MongoDB was used for database support. with a simple 2 schema
+MongoDB was used for database support. Designed with a simple 2 table construction
 
 ![high level database](./static/images/testing_img/db1.png)
 ![courses table](./static/images/testing_img/db2.png)
@@ -134,11 +134,11 @@ MongoDB was used for database support. with a simple 2 schema
 
 # Testing
 
-See TESTING.md for comprhensive testing
+See TESTING.md for comprehensive testing
 
 # Deployment
 
-The site is deployed with Heroku. I chose Heroku for its ease of use and ability to support backend features.
+The site is deployed with Heroku. I chose Heroku for its ease of use and ability to support backend features. Code is tested and matches that of the dev environemtn and is free of commented out code.
 
 Deployment instructions...
 

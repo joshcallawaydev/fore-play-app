@@ -1,6 +1,6 @@
 # Overview
 
-Below is the extensive testing performed on this project. Testing was compiled throughout the project in effort to minimise bugs and styling issues.
+Below is the testing performed on this project. Testing was compiled throughout the project in effort to minimise bugs and styling issues.
 
 # Table of contents
 
@@ -71,6 +71,21 @@ The site has a 404 error page...
 
 ![404 error page](./static/images/testing_img/404.png)
 
+### Functional / Integration / manual Testing
+
+1) Clicking the nav takes you to the relevant page - pass
+2) form submission works - pass
+3) Tracker shows your entries - pass
+4) Clicking social links work - pass
+5) Form validation works - pass
+6) Clicking edit on tracker works - pass
+7) Deleting tracker entries works - pass
+
+Testing images
+
+![Form submission](./static/images/testing_img/testing_form.png)
+![Button test](./static/images/testing_img/testing_buttons.png)
+
 # Dev Tools Testing
 
 I used Dev Tools primarily but also tested across other major browsers, inc Firefox and Safari.
@@ -85,10 +100,6 @@ Below is an image of me working thgrough the code in dev tools
 
 # Validators
 
-no issues found in code validation
+No issues found in code validation
 
 ![]()
-
-# Issues Faced
-
-text
