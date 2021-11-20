@@ -129,7 +129,9 @@ The colour scheme was chosen to match the asthetics of a golf application.
 MongoDB was used for database support. Designed with a simple 2 table construction
 
 ![high level database](./static/images/testing_img/db1.png)
+
 ![courses table](./static/images/testing_img/db2.png)
+
 ![users table](./static/images/testing_img/db3.png)
 
 # Testing
