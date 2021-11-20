@@ -188,3 +188,7 @@ By forking the GitHub Repo, you make a copy of the original repository on your G
 # Credit
 
 This is an original concept. The code is inspired by the python task manager app. Only images are taken from other sources.
+
+## further Notes
+
+With more time i would have liked to set up a admin account but due to the nature of the site, and the ability to access mongoDB for changing / deleting accounts, this was not set up for this itteration.
