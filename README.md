@@ -16,7 +16,7 @@ View live site here: http://fore-play-app.herokuapp.com/home
 - [Deployment](#Deployment)
 - [Credit](#Credit)
 
-# UX
+# User Stories
 
 #### 1. First time user - as a first time user i would like to
 
@@ -39,6 +39,8 @@ View live site here: http://fore-play-app.herokuapp.com/home
 - See social media links
 - Contact the business
 - Update my profile
+
+# Design
 
 ### Colour Scheme
 
@@ -90,7 +92,7 @@ The main feature is a round tracker.
 
 The colour scheme was chosen to match the asthetics of a golf application.
 
-# Technology
+# Technology used
 
 ### Languages
 
