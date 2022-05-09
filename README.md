@@ -5,8 +5,6 @@ Notes:
 
 Fore-play is a for golfers web application for updating and tracking your activity and play. Built in Python with Flask and using Materialize for quick construction. Feel free to fork the repository if you would like to further develop the site. Instructions for this are at the bottom of the page.
 
-View live site here: http://fore-play-app.herokuapp.com/home
-
 # Table Of Contents
 
 - [User Experiance](#UX)
@@ -194,3 +192,5 @@ This is an original concept. The code is inspired by the python task manager app
 ## further Notes
 
 With more time i would have liked to set up a admin account but due to the nature of the site, and the ability to access mongoDB for changing / deleting accounts, this was not set up for this itteration.
+
+View live site here: http://fore-play-app.herokuapp.com/home
